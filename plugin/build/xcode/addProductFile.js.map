@@ -1,0 +1,1 @@
+{"version":3,"file":"addProductFile.js","sourceRoot":"","sources":["../../src/xcode/addProductFile.ts"],"names":[],"mappings":";;AAEA,wCASC;AATD,SAAgB,cAAc,CAAC,YAA0B,EAAE,EAAE,UAAU,EAA6C;IAClH,MAAM,WAAW,GAAG,YAAY,CAAC,cAAc,CAAC,UAAU,EAAE;QAC1D,KAAK,EAAE,YAAY;QACnB,gBAAgB,EAAE,uBAAuB;KAC1C,CAAC,CAAC;IAEH,YAAY,CAAC,wBAAwB,CAAC,WAAW,CAAC,CAAC;IAEnD,OAAO,WAAW,CAAC;AACrB,CAAC"}

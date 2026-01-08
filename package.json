@@ -1,0 +1,40 @@
+{
+  "name": "expo-action-extension",
+  "version": "0.1.0",
+  "description": "iOS Action Extension support for Expo apps with support for multiple extensions",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "scripts": {
+    "build": "bunx tsc && bunx tsc -p plugin/tsconfig.json",
+    "clean": "rm -rf build plugin/build",
+    "prepare": "npm run build"
+  },
+  "keywords": ["expo", "react-native", "ios", "action-extension", "share-extension", "app-extension", "ui-services"],
+  "author": "Nils Fischer",
+  "license": "MIT",
+  "peerDependencies": {
+    "expo": "*",
+    "react": "*",
+    "react-native": "*"
+  },
+  "devDependencies": {
+    "@expo/config-plugins": "^9.0.0",
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.0.0",
+    "expo-modules-core": "*",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@expo/plist": "^0.2.0"
+  },
+  "files": [
+    "build",
+    "plugin/build",
+    "plugin/swift",
+    "ios",
+    "src",
+    "metro.js",
+    "app.plugin.js",
+    "expo-module.config.json"
+  ]
+}

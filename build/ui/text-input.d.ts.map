@@ -1,0 +1,1 @@
+{"version":3,"file":"text-input.d.ts","sourceRoot":"","sources":["../../src/ui/text-input.tsx"],"names":[],"mappings":"AAAA,OAAO,KAAK,MAAM,OAAO,CAAC;AAC1B,OAAO,EAA4B,cAAc,IAAI,gBAAgB,EAAE,MAAM,cAAc,CAAC;AAE5F,MAAM,WAAW,cAAe,SAAQ,gBAAgB;CAAG;AAE3D;;;;GAIG;AACH,wBAAgB,SAAS,CAAC,EAAE,gBAAwB,EAAE,GAAG,KAAK,EAAE,EAAE,cAAc,qBAE/E;AAED,eAAe,SAAS,CAAC"}
