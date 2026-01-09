@@ -1,6 +1,6 @@
 {
   "name": "expo-action-extension",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "iOS Action Extension support for Expo apps with support for multiple extensions",
   "main": "build/index.js",
   "types": "build/index.d.ts",
@@ -9,7 +9,15 @@
     "clean": "rm -rf build plugin/build",
     "prepare": "npm run build"
   },
-  "keywords": ["expo", "react-native", "ios", "action-extension", "share-extension", "app-extension", "ui-services"],
+  "keywords": [
+    "expo",
+    "react-native",
+    "ios",
+    "action-extension",
+    "share-extension",
+    "app-extension",
+    "ui-services"
+  ],
   "author": "Nils Fischer",
   "license": "MIT",
   "peerDependencies": {
