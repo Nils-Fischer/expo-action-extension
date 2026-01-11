@@ -49,7 +49,7 @@ const processIcon_1 = require("./xcode/processIcon");
  */
 const withActionExtensionInfoPlist = (config, { extension }) => {
     return (0, config_plugins_1.withInfoPlist)(config, (config) => {
-        const targetName = (0, utils_1.getTargetName)(extension.name);
+        const targetName = (0, utils_1.getTargetName)(extension);
         const targetPath = path.join(config.modRequest.platformProjectRoot, targetName);
         const filePath = path.join(targetPath, "Info.plist");
         const appGroup = (0, utils_1.getAppGroup)(config);

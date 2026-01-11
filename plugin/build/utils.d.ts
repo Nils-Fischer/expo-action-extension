@@ -7,14 +7,16 @@ import type { ActivationRule, ActionExtensionConfig } from "./types";
 export declare function sanitizeName(name: string): string;
 /**
  * Gets the target name for an extension.
- * @example getTargetName("SavePlace") → "SavePlaceActionExtension"
+ * Uses explicit targetName if provided, otherwise derives from name.
+ * @example getTargetName({ name: "Share with Locatr" }) → "SharewithLocatrActionExtension"
+ * @example getTargetName({ name: "Share with Locatr", targetName: "LocatrActionExtension" }) → "LocatrActionExtension"
  */
-export declare function getTargetName(extensionName: string): string;
+export declare function getTargetName(extension: ActionExtensionConfig): string;
 /**
  * Gets the bundle identifier for an extension.
- * @example getBundleIdentifier(config, "SavePlace") → "com.example.app.SavePlaceActionExtension"
+ * @example getBundleIdentifier(config, ext) → "com.example.app.LocatrActionExtension"
  */
-export declare function getBundleIdentifier(config: ExpoConfig, extensionName: string): string;
+export declare function getBundleIdentifier(config: ExpoConfig, extension: ActionExtensionConfig): string;
 /**
  * Gets the app's bundle identifier.
  */
@@ -29,9 +31,9 @@ export declare function getAppGroup(config: ExpoConfig): string;
 export declare function getHostAppScheme(config: ExpoConfig): string;
 /**
  * Gets the entitlements file name for an extension.
- * @example getEntitlementsFileName("SavePlace") → "SavePlaceActionExtension.entitlements"
+ * @example getEntitlementsFileName(ext) → "LocatrActionExtension.entitlements"
  */
-export declare function getEntitlementsFileName(extensionName: string): string;
+export declare function getEntitlementsFileName(extension: ActionExtensionConfig): string;
 /**
  * Gets the default module name for an extension.
  * Defaults to "actionExtension" unless overridden.

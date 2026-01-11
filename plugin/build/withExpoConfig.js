@@ -7,8 +7,8 @@ const utils_1 = require("./utils");
  * This ensures EAS builds can properly sign and bundle the extension.
  */
 const withExpoConfig = (config, { extension, shared }) => {
-    const targetName = (0, utils_1.getTargetName)(extension.name);
-    const bundleIdentifier = (0, utils_1.getBundleIdentifier)(config, extension.name);
+    const targetName = (0, utils_1.getTargetName)(extension);
+    const bundleIdentifier = (0, utils_1.getBundleIdentifier)(config, extension);
     const appGroup = (0, utils_1.getAppGroup)(config);
     // Build extension config for EAS
     const extensionConfig = {

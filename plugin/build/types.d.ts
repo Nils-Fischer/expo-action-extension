@@ -12,8 +12,10 @@ export interface BackgroundColor {
 }
 /** Single action extension configuration */
 export interface ActionExtensionConfig {
-    /** Unique name (used for target naming, e.g., "SavePlace" → "SavePlaceActionExtension") */
+    /** Display name shown in share sheet (e.g., "Share with Locatr") */
     name: string;
+    /** Xcode target name override (defaults to sanitizedName + "ActionExtension") */
+    targetName?: string;
     /** Path to icon PNG (60x60 @1x recommended). REQUIRED. */
     icon: string;
     /** Activation rules (defaults to [{ type: "url" }, { type: "text" }]) */

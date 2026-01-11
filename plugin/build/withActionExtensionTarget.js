@@ -17,8 +17,8 @@ const addXCConfigurationList_1 = require("./xcode/addXCConfigurationList");
 const withActionExtensionTarget = (config, { extension }) => {
     return (0, config_plugins_1.withXcodeProject)(config, async (config) => {
         const xcodeProject = config.modResults;
-        const targetName = (0, utils_1.getTargetName)(extension.name);
-        const bundleIdentifier = (0, utils_1.getBundleIdentifier)(config, extension.name);
+        const targetName = (0, utils_1.getTargetName)(extension);
+        const bundleIdentifier = (0, utils_1.getBundleIdentifier)(config, extension);
         const marketingVersion = config.version;
         const targetUuid = xcodeProject.generateUuid();
         const groupName = "Embed Action Extensions";

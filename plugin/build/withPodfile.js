@@ -52,7 +52,7 @@ const withPodfile = (config, { extension, shared }) => {
                 return config;
             }
             let podfileContent = fs.readFileSync(podfilePath, "utf-8");
-            const targetName = (0, utils_1.getTargetName)(extension.name);
+            const targetName = (0, utils_1.getTargetName)(extension);
             // Check if target already exists
             if (podfileContent.includes(`target '${targetName}'`)) {
                 return config;

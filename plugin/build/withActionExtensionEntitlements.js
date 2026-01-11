@@ -48,7 +48,7 @@ const utils_1 = require("./utils");
  */
 const withActionExtensionEntitlements = (config, { extension, shared }) => {
     return (0, config_plugins_1.withEntitlementsPlist)(config, (config) => {
-        const targetName = (0, utils_1.getTargetName)(extension.name);
+        const targetName = (0, utils_1.getTargetName)(extension);
         const targetPath = path.join(config.modRequest.platformProjectRoot, targetName);
         const filePath = path.join(targetPath, `${targetName}.entitlements`);
         // Build entitlements

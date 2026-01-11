@@ -8,7 +8,7 @@ function addBuildPhases(xcodeProject, { targetUuid, groupName, productFile, exte
     const targetType = "app_extension";
     const entryFile = (0, utils_1.getEntryFile)(extension);
     const iconFileNames = (0, processIcon_1.getIconFileNames)(extension.name);
-    const targetName = (0, utils_1.getTargetName)(extension.name);
+    const targetName = (0, utils_1.getTargetName)(extension);
     // Use unique swift filename to avoid collision between multiple extensions
     const swiftFileName = `${targetName}ViewController.swift`;
     // Add shell script build phase "Start Packager"
