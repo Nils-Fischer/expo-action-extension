@@ -13,19 +13,24 @@ export function sanitizeName(name: string): string {
 
 /**
  * Gets the target name for an extension.
- * @example getTargetName("SavePlace") → "SavePlaceActionExtension"
+ * Uses explicit targetName if provided, otherwise derives from name.
+ * @example getTargetName({ name: "Share with Locatr" }) → "SharewithLocatrActionExtension"
+ * @example getTargetName({ name: "Share with Locatr", targetName: "LocatrActionExtension" }) → "LocatrActionExtension"
  */
-export function getTargetName(extensionName: string): string {
-  return `${sanitizeName(extensionName)}ActionExtension`;
+export function getTargetName(extension: ActionExtensionConfig): string {
+  if (extension.targetName) {
+    return extension.targetName;
+  }
+  return `${sanitizeName(extension.name)}ActionExtension`;
 }
 
 /**
  * Gets the bundle identifier for an extension.
- * @example getBundleIdentifier(config, "SavePlace") → "com.example.app.SavePlaceActionExtension"
+ * @example getBundleIdentifier(config, ext) → "com.example.app.LocatrActionExtension"
  */
-export function getBundleIdentifier(config: ExpoConfig, extensionName: string): string {
+export function getBundleIdentifier(config: ExpoConfig, extension: ActionExtensionConfig): string {
   const appBundleId = config.ios?.bundleIdentifier ?? "";
-  return `${appBundleId}.${getTargetName(extensionName)}`;
+  return `${appBundleId}.${getTargetName(extension)}`;
 }
 
 /**
@@ -51,10 +56,10 @@ export function getHostAppScheme(config: ExpoConfig): string {
 
 /**
  * Gets the entitlements file name for an extension.
- * @example getEntitlementsFileName("SavePlace") → "SavePlaceActionExtension.entitlements"
+ * @example getEntitlementsFileName(ext) → "LocatrActionExtension.entitlements"
  */
-export function getEntitlementsFileName(extensionName: string): string {
-  return `${getTargetName(extensionName)}.entitlements`;
+export function getEntitlementsFileName(extension: ActionExtensionConfig): string {
+  return `${getTargetName(extension)}.entitlements`;
 }
 
 /**

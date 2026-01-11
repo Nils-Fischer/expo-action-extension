@@ -27,7 +27,7 @@ interface InfoPlist {
  */
 export const withActionExtensionInfoPlist: ConfigPlugin<ExtensionContext> = (config, { extension }) => {
   return withInfoPlist(config, (config) => {
-    const targetName = getTargetName(extension.name);
+    const targetName = getTargetName(extension);
     const targetPath = path.join(config.modRequest.platformProjectRoot, targetName);
     const filePath = path.join(targetPath, "Info.plist");
 

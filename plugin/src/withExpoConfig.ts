@@ -7,8 +7,8 @@ import { getBundleIdentifier, getTargetName, getAppGroup } from "./utils";
  * This ensures EAS builds can properly sign and bundle the extension.
  */
 export const withExpoConfig: ConfigPlugin<ExtensionContext> = (config, { extension, shared }) => {
-  const targetName = getTargetName(extension.name);
-  const bundleIdentifier = getBundleIdentifier(config, extension.name);
+  const targetName = getTargetName(extension);
+  const bundleIdentifier = getBundleIdentifier(config, extension);
   const appGroup = getAppGroup(config);
 
   // Build extension config for EAS

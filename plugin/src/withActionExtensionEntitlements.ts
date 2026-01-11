@@ -12,7 +12,7 @@ import { getTargetName, getAppGroup } from "./utils";
  */
 export const withActionExtensionEntitlements: ConfigPlugin<ExtensionContext> = (config, { extension, shared }) => {
   return withEntitlementsPlist(config, (config) => {
-    const targetName = getTargetName(extension.name);
+    const targetName = getTargetName(extension);
     const targetPath = path.join(config.modRequest.platformProjectRoot, targetName);
     const filePath = path.join(targetPath, `${targetName}.entitlements`);
 

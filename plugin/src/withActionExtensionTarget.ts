@@ -18,8 +18,8 @@ export const withActionExtensionTarget: ConfigPlugin<ExtensionContext> = (config
   return withXcodeProject(config, async (config) => {
     const xcodeProject = config.modResults;
 
-    const targetName = getTargetName(extension.name);
-    const bundleIdentifier = getBundleIdentifier(config, extension.name);
+    const targetName = getTargetName(extension);
+    const bundleIdentifier = getBundleIdentifier(config, extension);
     const marketingVersion = config.version;
 
     const targetUuid = xcodeProject.generateUuid();

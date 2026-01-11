@@ -21,7 +21,7 @@ export const withPodfile: ConfigPlugin<ExtensionContext> = (config, { extension,
       }
 
       let podfileContent = fs.readFileSync(podfilePath, "utf-8");
-      const targetName = getTargetName(extension.name);
+      const targetName = getTargetName(extension);
 
       // Check if target already exists
       if (podfileContent.includes(`target '${targetName}'`)) {

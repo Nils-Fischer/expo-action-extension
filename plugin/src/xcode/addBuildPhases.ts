@@ -26,7 +26,7 @@ export function addBuildPhases(
   const targetType = "app_extension";
   const entryFile = getEntryFile(extension);
   const iconFileNames = getIconFileNames(extension.name);
-  const targetName = getTargetName(extension.name);
+  const targetName = getTargetName(extension);
 
   // Use unique swift filename to avoid collision between multiple extensions
   const swiftFileName = `${targetName}ViewController.swift`;
